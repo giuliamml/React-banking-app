@@ -4,67 +4,391 @@
       "id": 1,
       "firstName": "John",
       "lastName": "Smith",
-      "email": "john.smith@gmail.com"
+      "email": "john.smith@gmail.com",
+      "transactions": [
+        {
+          "vendor": "TFL",
+          "amount": 10,
+          "date": "1/6/2020"
+        },
+        {
+          "vendor": "M&S",
+          "amount": 50,
+          "date": "1/6/2020"
+        },
+        {
+          "vendor": "Uber",
+          "amount": 20,
+          "date": "1/6/2020"
+        },
+        {
+          "vendor": "Amazon Uk",
+          "amount": 200,
+          "date": "31/5/2020"
+        },
+        {
+          "vendor": "Starbucks",
+          "amount": 2.5,
+          "date": "31/5/2020"
+        }
+      ]
     },
     {
       "id": 2,
       "firstName": "Andrew",
       "lastName": "Black",
-      "email": "andrew.black@gmail.com"
+      "email": "andrew.black@gmail.com",
+      "transactions": [
+        {
+          "vendor": "TFL",
+          "amount": 10,
+          "date": "1/6/2020"
+        },
+        {
+          "vendor": "Tesco",
+          "amount": 200,
+          "date": "1/6/2020"
+        },
+        {
+          "vendor": "Pret a Manger",
+          "amount": 5,
+          "date": "1/6/2020"
+        },
+        {
+          "vendor": "Ebay",
+          "amount": 500,
+          "date": "31/5/2020"
+        },
+        {
+          "vendor": "Amazon",
+          "amount": 100,
+          "date": "31/5/2020"
+        }
+      ]
     },
     {
       "id": 3,
       "firstName": "Tom",
       "lastName": "Green",
-      "email": "tom.green@gmail.com"
+      "email": "tom.green@gmail.com",
+      "transactions": [
+        {
+          "vendor": "Uber",
+          "amount": 30,
+          "date": "31/5/2020"
+        },
+        {
+          "vendor": "Sainsuby's",
+          "amount": 300,
+          "date": "31/5/2020"
+        },
+        {
+          "vendor": "Deliveroo",
+          "amount": 50,
+          "date": "30/5/2020"
+        },
+        {
+          "vendor": "Royal Mail",
+          "amount": 3.5,
+          "date": "30/5/2020"
+        },
+        {
+          "vendor": "Starbucks",
+          "amount": 5.5,
+          "date": "29/5/2020"
+        }
+      ]
     },
     {
       "id": 4,
       "firstName": "Tony",
       "lastName": "Davis",
-      "email": "tony.davis@gmail.com"
+      "email": "tony.davis@gmail.com",
+      "transactions": [
+        {
+          "vendor": "M&S",
+          "amount": 200,
+          "date": "31/5/2020"
+        },
+        {
+          "vendor": "Deliveroo",
+          "amount": 45,
+          "date": "30/5/2020"
+        },
+        {
+          "vendor": "Amazon",
+          "amount": 300,
+          "date": "30/5/2020"
+        },
+        {
+          "vendor": "Ebay",
+          "amount": 20,
+          "date": "29/5/2020"
+        },
+        {
+          "vendor": "Pret a Manger",
+          "amount": 2.95,
+          "date": "29/5/2020"
+        }
+      ]
+    }
+  ],
+  "transactions": [
+    {
+      "vendor": "TFL",
+      "amount": 10,
+      "date": "1/6/2020",
+      "userId": 1,
+      "id": 1
     },
     {
-      "firstName": "",
-      "lastName": "",
-      "email": "",
+      "vendor": "M&S",
+      "amount": 50,
+      "date": "1/6/2020",
+      "userId": 1,
+      "id": 2
+    },
+    {
+      "vendor": "Uber",
+      "amount": 20,
+      "date": "1/6/2020",
+      "userId": 1,
+      "id": 3
+    },
+    {
+      "vendor": "Amazon Uk",
+      "amount": 200,
+      "date": "31/5/2020",
+      "userId": 1,
+      "id": 4
+    },
+    {
+      "vendor": "Starbucks",
+      "amount": 2.5,
+      "date": "31/5/2020",
+      "userId": 1,
       "id": 5
     },
     {
-      "firstName": "",
-      "lastName": "",
-      "email": "",
-      "": "mail@giuliamummolo.com",
+      "vendor": "TFL",
+      "amount": 10,
+      "date": "1/6/2020",
+      "userId": 2,
       "id": 6
     },
     {
-      "firstName": "",
-      "lastName": "",
-      "email": "",
-      "": "email",
+      "vendor": "Tesco",
+      "amount": 200,
+      "date": "1/6/2020",
+      "userId": 2,
       "id": 7
     },
     {
-      "firstName": "Giulia",
-      "lastName": "Mummolo",
-      "email": "giuliamummolo@yahoo.it",
+      "vendor": "Pret a Manger",
+      "amount": 5,
+      "date": "1/6/2020",
+      "userId": 2,
       "id": 8
     },
     {
-      "firstName": "Giulia",
-      "lastName": "Mummolo",
-      "email": "mail@giuliamummolo.com",
+      "vendor": "Ebay",
+      "amount": 500,
+      "date": "31/5/2020",
+      "userId": 2,
       "id": 9
-    }
-  ],
-  "comments": [
+    },
     {
-      "id": 1,
-      "body": "some comment",
-      "postId": 1
+      "vendor": "Amazon",
+      "amount": 100,
+      "date": "31/5/2020",
+      "userId": 2,
+      "id": 10
+    },
+    {
+      "vendor": "Uber",
+      "amount": 30,
+      "date": "31/5/2020",
+      "userId": 3,
+      "id": 11
+    },
+    {
+      "vendor": "Sainsuby's",
+      "amount": 300,
+      "date": "31/5/2020",
+      "userId": 3,
+      "id": 12
+    },
+    {
+      "vendor": "Deliveroo",
+      "amount": 50,
+      "date": "30/5/2020",
+      "userId": 3,
+      "id": 13
+    },
+    {
+      "vendor": "Royal Mail",
+      "amount": 3.5,
+      "date": "30/5/2020",
+      "userId": 3,
+      "id": 14
+    },
+    {
+      "vendor": "Starbucks",
+      "amount": 5.5,
+      "date": "29/5/2020",
+      "userId": 3,
+      "id": 15
+    },
+    {
+      "vendor": "M&S",
+      "amount": 200,
+      "date": "31/5/2020",
+      "userId": 4,
+      "id": 16
+    },
+    {
+      "vendor": "Deliveroo",
+      "amount": 45,
+      "date": "30/5/2020",
+      "userId": 4,
+      "id": 17
+    },
+    {
+      "vendor": "Amazon",
+      "amount": 300,
+      "date": "30/5/2020",
+      "userId": 4,
+      "id": 18
+    },
+    {
+      "vendor": "Ebay",
+      "amount": 20,
+      "date": "29/5/2020",
+      "userId": 4,
+      "id": 19
+    },
+    {
+      "vendor": "Pret a Manger",
+      "amount": 2.95,
+      "date": "29/5/2020",
+      "userId": 4,
+      "id": 20
     }
   ],
-  "profile": {
-    "name": "typicode"
-  }
+  "savings": [
+    {
+      "name": "Rounded Expenses",
+      "amount": 10,
+      "id": 1,
+      "userId": 1,
+      "date": "31/5/2020"
+    },
+    {
+      "name": "Rounded Expenses",
+      "amount": 500,
+      "id": 2,
+      "userId": 1,
+      "date": "10/5/20"
+    },
+    {
+      "name": "Rounded Expenses",
+      "amount": 200,
+      "id": 3,
+      "userId": 2,
+      "date": "1/6/2020"
+    },
+    {
+      "name": "Rounded Expenses",
+      "amount": 1000,
+      "id": 4,
+      "userId": 2,
+      "date": "28/4/2020"
+    },
+    {
+      "name": "Rounded Expenses",
+      "amount": 200,
+      "id": 5,
+      "userId": 3,
+      "date": "1/6/2020"
+    },
+    {
+      "name": "Rounded Expenses",
+      "amount": 700,
+      "id": 6,
+      "userId": 3,
+      "date": "31/5/2020"
+    },
+    {
+      "name": "Rounded Expenses",
+      "amount": 50,
+      "id": 7,
+      "userId": 4,
+      "date": "28/5/2020"
+    },
+    {
+      "name": "Rounded Expenses",
+      "amount": 2000,
+      "id": 8,
+      "userId": 4,
+      "date": "1/6/2020"
+    }
+  ],
+  "loans": [
+    {
+      "name": "Thanks for the payment",
+      "amount": 10,
+      "id": 1,
+      "userId": 1,
+      "date": "31/5/2020"
+    },
+    {
+      "name": "Thanks for the payment",
+      "amount": 500,
+      "id": 2,
+      "userId": 1,
+      "date": "10/5/20"
+    },
+    {
+      "name": "Thanks for the payment",
+      "amount": 200,
+      "id": 3,
+      "userId": 2,
+      "date": "1/6/2020"
+    },
+    {
+      "name": "Thanks for the payment",
+      "amount": 1000,
+      "id": 4,
+      "userId": 2,
+      "date": "28/4/2020"
+    },
+    {
+      "name": "Thanks for the payment",
+      "amount": 200,
+      "id": 5,
+      "userId": 3,
+      "date": "1/6/2020"
+    },
+    {
+      "name": "Thanks for the payment",
+      "amount": 700,
+      "id": 6,
+      "userId": 3,
+      "date": "31/5/2020"
+    },
+    {
+      "name": "Rounded Expenses",
+      "amount": 50,
+      "id": 7,
+      "userId": 4,
+      "date": "28/5/2020"
+    },
+    {
+      "name": "Thanks for the payment",
+      "amount": 2000,
+      "id": 8,
+      "userId": 4,
+      "date": "1/6/2020"
+    }
+  ]
 }

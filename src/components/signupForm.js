@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import Header from "./header";
+import Header from "./navigation";
 import styles from "../components/signupForm.scss";
 import { useHistory } from "react-router-dom";
 

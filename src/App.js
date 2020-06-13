@@ -10,7 +10,7 @@ function App() {
     <Router>
       <Route exact path="/" component={Login}></Route>
       <Route exact path="/signup" component={SignUp}></Route>
-      <Route exact path='/homepage/user:id' component={Homepage}></Route>
+      <Route exact path='/homepage' component={Homepage}></Route>
     </Router>
   );
 }

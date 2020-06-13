@@ -1,21 +1,14 @@
-import React, { useState, useEffect }from "react";
-import Header from "./header.js";
+import React, { useState, useEffect } from "react";
+import Navigation from "./navigation.js";
 import LoginForm from "./loginForm";
 import { useHistory } from "react-router-dom";
-
+import styles from "../components/navigation.scss";
 
 const Login = () => {
-
-    const [state, setState] = useState(true) 
-
-    //create state for the homepage when login is ok
-
   return (
     <div>
-      <Header />
+      <Navigation />
       <LoginForm />
-
-      
     </div>
   );
 };

@@ -1,11 +1,14 @@
 import React from "react";
-import styles from "../components/homepage.scss";
-import { useHistory } from "react-router-dom";
+import Navigation from "./navigation.js";
+import Wallet from "./wallet.js";
+import styles from "../components/wallet.scss";
 
 const Homepage = () => {
   return (
     <div>
-      <h1>{"hello"}</h1>
+      {" "}
+      <Navigation />
+      <Wallet />
     </div>
   );
 };
