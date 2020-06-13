@@ -1,0 +1,38 @@
+$light-grey: #3d4046;
+%nav-links-style {
+  font-family: "Roboto", sans-serif;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 16px;
+  line-height: 19px;
+  color: #ffffff;
+  list-style: none;
+  text-transform: uppercase;
+  cursor: pointer;
+}
+
+.header-wrapper {
+  background-color: $light-grey;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+
+  img {
+    padding: 1%;
+  }
+
+  .login-sections {
+    display: inline;
+    padding: 1%;
+
+    ul {
+      padding: 0;
+      border: 0;
+
+      li {
+        @extend %nav-links-style;
+        display: inline-block;
+      }
+    }
+  }
+}

@@ -1,0 +1,70 @@
+{
+  "users": [
+    {
+      "id": 1,
+      "firstName": "John",
+      "lastName": "Smith",
+      "email": "john.smith@gmail.com"
+    },
+    {
+      "id": 2,
+      "firstName": "Andrew",
+      "lastName": "Black",
+      "email": "andrew.black@gmail.com"
+    },
+    {
+      "id": 3,
+      "firstName": "Tom",
+      "lastName": "Green",
+      "email": "tom.green@gmail.com"
+    },
+    {
+      "id": 4,
+      "firstName": "Tony",
+      "lastName": "Davis",
+      "email": "tony.davis@gmail.com"
+    },
+    {
+      "firstName": "",
+      "lastName": "",
+      "email": "",
+      "id": 5
+    },
+    {
+      "firstName": "",
+      "lastName": "",
+      "email": "",
+      "": "mail@giuliamummolo.com",
+      "id": 6
+    },
+    {
+      "firstName": "",
+      "lastName": "",
+      "email": "",
+      "": "email",
+      "id": 7
+    },
+    {
+      "firstName": "Giulia",
+      "lastName": "Mummolo",
+      "email": "giuliamummolo@yahoo.it",
+      "id": 8
+    },
+    {
+      "firstName": "Giulia",
+      "lastName": "Mummolo",
+      "email": "mail@giuliamummolo.com",
+      "id": 9
+    }
+  ],
+  "comments": [
+    {
+      "id": 1,
+      "body": "some comment",
+      "postId": 1
+    }
+  ],
+  "profile": {
+    "name": "typicode"
+  }
+}
