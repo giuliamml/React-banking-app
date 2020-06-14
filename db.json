@@ -5,6 +5,8 @@
       "firstName": "John",
       "lastName": "Smith",
       "email": "john.smith@gmail.com",
+      "password": "1234",
+      "confirmPassword": "1234",
       "transactions": [
         {
           "vendor": "TFL",
@@ -38,6 +40,8 @@
       "firstName": "Andrew",
       "lastName": "Black",
       "email": "andrew.black@gmail.com",
+      "password": "1234",
+      "confirmPassword": "1234",
       "transactions": [
         {
           "vendor": "TFL",
@@ -71,6 +75,8 @@
       "firstName": "Tom",
       "lastName": "Green",
       "email": "tom.green@gmail.com",
+      "password": "1234",
+      "confirmPassword": "1234",
       "transactions": [
         {
           "vendor": "Uber",
@@ -104,6 +110,8 @@
       "firstName": "Tony",
       "lastName": "Davis",
       "email": "tony.davis@gmail.com",
+      "password": "1234",
+      "confirmPassword": "1234",
       "transactions": [
         {
           "vendor": "M&S",
@@ -131,6 +139,14 @@
           "date": "29/5/2020"
         }
       ]
+    },
+    {
+      "firstName": "Giulia",
+      "lastName": "Mummolo",
+      "email": "mail@giuliamummolo.com",
+      "password": "1234",
+      "confirmPassword": "1234",
+      "id": 5
     }
   ],
   "transactions": [

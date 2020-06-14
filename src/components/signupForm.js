@@ -8,6 +8,8 @@ const SignUpForm = () => {
     firstName: "",
     lastName: "",
     email: "",
+    password: "",
+    confirmPassword: "",
   });
 
   const handleChange = (event) => {
@@ -16,14 +18,20 @@ const SignUpForm = () => {
       [event.target.name]: event.target.value,
     });
   };
-  
+
   let history = useHistory();
 
   const handleSubmit = (event) => {
     event.preventDefault();
-    postUser(userInfo);
-    console.log("posted");
-    history.push("/");
+
+    if (userInfo.password === userInfo.confirmPassword) {
+      postUser(userInfo);
+      console.log("posted");
+      history.push("/");
+    } else {
+      console.log("not matching emails");
+      alert("Passwords not matching. Please try again!");
+    }
   };
 
   const postUser = async (user) => {
@@ -68,8 +76,20 @@ const SignUpForm = () => {
           name="email"
           value={userInfo.email}
         />
-        <input type="text" placeholder={"password"} />
-        <input type="text" placeholder={"confirm password"} />
+        <input
+          type="password"
+          placeholder={"password"}
+          className="password"
+          name="password"
+          value={userInfo.password}
+        />
+        <input
+          type="password"
+          placeholder={"confirm password"}
+          className="confirmPassword"
+          name="confirmPassword"
+          value={userInfo.confirmPassword}
+        />
         <label>{"Upload avatar"}</label>
         <input type="file" placeholder={"last name"} />
         <input type="submit" value="Sign up" />
