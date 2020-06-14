@@ -1,4 +1,6 @@
 import React, { useState, useEffect } from "react";
+import style from './wallet.scss';
+
 
 const Amount = (props) => {
   const [userData, setUserData] = useState({
@@ -59,7 +61,7 @@ const Amount = (props) => {
   }, []);
 
   return (
-    <div>
+    <div className='amount-input'>
       <form  onSubmit={handleSubmit}>
         <input type="text" id={props.id} onChange={handleChange}></input>
         <input type="submit"></input>

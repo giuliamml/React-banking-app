@@ -1,0 +1,135 @@
+.settings-wrapper {
+  width: 320px;
+  height: 816px;
+  border-top: 3px solid #f4613a;
+  background: linear-gradient(
+    200.71deg,
+    #3d4046 27.15%,
+    rgba(61, 64, 70, 0) 154.52%
+  );
+  box-shadow: 5px 6px 6px #42434d;
+  position: absolute;
+  right: 0;
+
+
+  .settings-header {
+    display: grid;
+    grid-template-rows: auto 1fr auto;
+    border-bottom: 2px solid #f4613a;
+
+    button {
+      background-image: url("../images/Arrow\ 1.svg");
+      background-repeat: no-repeat;
+      background-position: right;
+      background-color: transparent;
+      border: none;
+      cursor: pointer;
+      position: relative;
+      width: 30px;
+      height: 10px;
+      display: inline;
+    }
+
+    h1 {
+      font-size: 24px;
+      line-height: 28px;
+      color: #ffffff;
+      display: inline;
+      position: relative;
+      float: right;
+    }
+
+    h3 {
+      font-size: 18px;
+      line-height: 16px;
+      color: #ffffff;
+    }
+    .toggles {
+      display: flex;
+      flex-direction: column;
+
+      .toggle {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        p {
+          display: inline;
+          font-size: 14px;
+          line-height: 16px;
+          color: #ffffff;
+        }
+        .switch {
+          position: relative;
+          display: inline-block;
+          width: 60px;
+          height: 34px;
+        }
+
+        .switch input {
+          opacity: 0;
+          width: 0;
+          height: 0;
+        }
+
+        .slider {
+          position: absolute;
+          cursor: pointer;
+          top: 0;
+          left: 0;
+          right: 0;
+          bottom: 0;
+          background-color: rgba(217, 210, 209, 0.2);
+          border: 1px solid #d9d2d1;
+          box-sizing: border-box;
+          border-radius: 8px;
+          -webkit-transition: 0.4s;
+          transition: 0.4s;
+        }
+
+        .slider:before {
+          position: absolute;
+          content: "";
+          height: 26px;
+          width: 26px;
+          left: 4px;
+          bottom: 4px;
+          background-color: rgba(217, 210, 209, 0.2);
+          -webkit-transition: 0.4s;
+          transition: 0.4s;
+        }
+
+        input:checked + .slider {
+          background-color: rgba(217, 210, 209, 0.2);
+        }
+
+        input:focus + .slider {
+          box-shadow: 0 0 1px rgba(217, 210, 209, 0.2);
+        }
+
+        input:checked + .slider:before {
+          -webkit-transform: translateX(26px);
+          -ms-transform: translateX(26px);
+          transform: translateX(26px);
+        }
+        .slider.round {
+          border-radius: 34px;
+        }
+
+        .slider.round:before {
+          border-radius: 50%;
+          background: #ffffff;
+          border: 1px solid #ffffff;
+          box-sizing: border-box;
+        }
+      }
+    }
+  }
+
+  .sign-up-wrapper {
+    width: 320px;
+
+    .header {
+      display: none;
+    }
+  }
+}

@@ -63,9 +63,8 @@ const SavingsAccount = () => {
           {decimals}
         </h1>
         <button onClick={buttonClickIn}>Pay in</button>
-
         <p>{"balance"}</p>
-        <button onClick={buttonClickOut}>Pay out</button>
+        <button onClick={buttonClickOut}>Pay out</button>{" "}
         {amountIn.showComponent ? <AmountIn id={"savings-amount"} /> : null}
         {amountOut.showComponent ? <AmountOut id={"savings-amount"} /> : null}
       </div>
@@ -80,11 +79,11 @@ const SavingsAccount = () => {
             {transactions.map((transaction) => (
               <div className="transaction">
                 <li key={transaction.id}>{transaction.name}</li>
-                <p>{transaction.date}</p>
                 <span key={transaction.amount}>
                   {"£"}
                   {transaction.amount}
-                </span>
+                </span>{" "}
+                <p>{transaction.date}</p>
               </div>
             ))}
           </ul>

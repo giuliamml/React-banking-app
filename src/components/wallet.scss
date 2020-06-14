@@ -2,6 +2,8 @@
   width: 100%;
   height: 100vh;
   margin-top: 5%;
+  display: flex;
+  flex-direction: column;
 
   .wallet-header {
     width: 560px;
@@ -17,8 +19,27 @@
     position: relative;
     display: grid;
     grid-template-columns: 1fr 1fr;
-    grid-template-rows: 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
     margin-bottom: 5%;
+
+    .amount-input {
+      width: 560px;
+      height: 168px;
+      /*review the spacing for form*/
+      border-top: 0.5px solid rgba(133, 135, 136, 0.6);
+
+      form {
+        background-color: transparent;
+        border-bottom: 0.5px solid rgba(133, 135, 136, 0.6);
+
+        input {
+          background-color: transparent;
+          border-top: none;
+          border-left: none;
+          border-right: none;
+        }
+      }
+    }
 
     h1,
     p:nth-of-type(1) {
@@ -43,6 +64,35 @@
       align-self: center;
       color: #ffffff;
       text-transform: capitalize;
+    }
+    button:nth-of-type(1) {
+      background-color: #00c637;
+      border-radius: 7px;
+      width: 83px;
+      height: 28px;
+      border: none;
+      align-self: center;
+      justify-self: end;
+      transform: translateX(-50%);
+      color: #ffffff;
+      text-transform: uppercase;
+      font-weight: bold;
+      font-size: 14px;
+      line-height: 16px;
+    }
+    button:nth-of-type(2) {
+      background-color: #61636a;
+      border: none;
+      border-radius: 7px;
+      width: 83px;
+      height: 28px;
+      justify-self: end;
+      transform: translateX(-50%);
+      color: #ffffff;
+      text-transform: uppercase;
+      font-weight: bold;
+      font-size: 14px;
+      line-height: 16px;
     }
   }
 
@@ -97,6 +147,9 @@
             color: #ffffff;
             position: relative;
             left: 20%;
+            font-size: 18px;
+            line-height: 21px;
+            color: #ffffff;
           }
 
           span {
@@ -104,6 +157,17 @@
             color: #ffffff;
             position: relative;
             right: 20%;
+            font-weight: 700;
+            font-size: 18px;
+            line-height: 21px;
+          }
+
+          p {
+            position: relative;
+            left: 20%;
+            font-size: 14px;
+            line-height: 16px;
+            color: #d9d2d1;
           }
         }
       }

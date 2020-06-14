@@ -92,7 +92,7 @@ const SignUpForm = () => {
         />
         <label>{"Upload avatar"}</label>
         <input type="file" placeholder={"last name"} />
-        <input type="submit" value="Sign up" />
+        <input type="submit" value="Save" />
       </form>
     </div>
   );
