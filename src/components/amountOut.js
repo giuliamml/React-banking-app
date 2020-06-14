@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 
-const Amount = (props) => {
+const AmountOut = (props) => {
   const [userData, setUserData] = useState({
     balance: 0,
     savingsBalance: 0,
@@ -14,8 +14,8 @@ const Amount = (props) => {
     let response = await fetch(`http://localhost:3001/users/${userId}`);
     let userDataFetched = await response.json();
     setUserData({
-      balance: userDataFetched[0].balance,
-      savingsBalance: userDataFetched[0].savingsBalance,
+      balance: userDataFetched.balance,
+      savingsBalance: userDataFetched.savingsBalance,
     });
     console.log(userData);
   };
@@ -27,8 +27,8 @@ const Amount = (props) => {
 
   const handleSubmit = (event) => {
     let newBalance = {
-      balance: userData.balance - parseInt(userInput),
-      savingsBalance: userData.savingsBalance + parseInt(userInput),
+      balance: userData.balance + parseInt(userInput),
+      savingsBalance: userData.savingsBalance - parseInt(userInput),
     };
 
     return fetch(`http://localhost:3001/users/${userId}`, {
@@ -49,8 +49,6 @@ const Amount = (props) => {
       .catch((error) => {
         return "Oops we couldn't update that!";
       });
-
-      
   };
 
   console.log(userData);
@@ -60,12 +58,12 @@ const Amount = (props) => {
 
   return (
     <div>
-      <form  onSubmit={handleSubmit}>
-        <input type="text" id={props.id} onChange={handleChange}></input>
+      <form onChange={handleChange} onSubmit={handleSubmit}>
+        <input type="text" id={props.id}></input>
         <input type="submit"></input>
       </form>
     </div>
   );
 };
 
-export default Amount;
+export default AmountOut;

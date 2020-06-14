@@ -1,22 +1,27 @@
 import React, { useState, useEffect } from "react";
-import Amount from "./amount";
+import AmountIn from "./amountIn";
+import AmountOut from "./amountOut.js";
 
 const SavingsAccount = () => {
   const [transactions, setTransactions] = useState([]);
   const [balance, setBalance] = useState(0);
-  const [payIn, setPayIn] = useState(0);
-  const [payOut, setPayOut] = useState(0);
 
-  const [amount, setAmount] = useState({ showComponent: false });
+  const [amountIn, setAmountIn] = useState({ showComponent: false });
+  const [amountOut, setAmountOut] = useState({ showComponent: false });
 
-  const buttonClick = () => {
+  const buttonClickIn = () => {
     {
-      return amount.showComponent
-        ? setAmount({ showComponent: false })
-        : setAmount({ showComponent: true });
+      return amountIn.showComponent
+        ? setAmountIn({ showComponent: false })
+        : setAmountIn({ showComponent: true });
     }
   };
-  console.log(amount);
+
+  const buttonClickOut = () => {
+    return amountOut.showComponent
+      ? setAmountOut({ showComponent: false })
+      : setAmountOut({ showComponent: true });
+  };
   //review how to get params from url
   let userId = document.location.pathname.split("").slice(-1)[0];
   console.log(userId);
@@ -30,9 +35,9 @@ const SavingsAccount = () => {
   };
 
   const getBalance = async () => {
-    let response = await fetch(`http://localhost:3001/users?id=${userId}`);
+    let response = await fetch(`http://localhost:3001/users/${userId}`);
     let fetchedData = await response.json();
-    let balance = fetchedData[0].savingsBalance;
+    let balance = fetchedData.savingsBalance;
 
     setBalance(balance);
   };
@@ -47,10 +52,7 @@ const SavingsAccount = () => {
     getBalance();
   }, []);
 
-  //on pay in btn: transfer amount from wallet to savings
   //on pay out: transfer amount from savings to wallet
-
-  const handlePayIn = () => {};
 
   return (
     <div className="wallet-wrapper">
@@ -60,14 +62,13 @@ const SavingsAccount = () => {
           {"."}
           {decimals}
         </h1>
-        <button onClick={buttonClick}>
-          Pay in</button>
-        
+        <button onClick={buttonClickIn}>Pay in</button>
+
         <p>{"balance"}</p>
-        <button>Pay out</button>
-        {amount.showComponent ? <Amount id={'savings-amount'}/> : null}
+        <button onClick={buttonClickOut}>Pay out</button>
+        {amountIn.showComponent ? <AmountIn id={"savings-amount"} /> : null}
+        {amountOut.showComponent ? <AmountOut id={"savings-amount"} /> : null}
       </div>
-    
 
       <div className="wallet-content">
         <div className="wallet-content-header">

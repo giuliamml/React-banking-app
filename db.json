@@ -44,8 +44,8 @@
       "email": "andrew.black@gmail.com",
       "password": "1234",
       "confirmPassword": "1234",
-      "balance": 5830358,
-      "savingsBalance": 4767700,
+      "balance": 5829946,
+      "savingsBalance": 4768112,
       "transactions": [
         {
           "vendor": "TFL",

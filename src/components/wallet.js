@@ -19,17 +19,18 @@ const Wallet = () => {
   };
 
   const getBalance = async () => {
-    let response = await fetch(`http://localhost:3001/users?id=${userId}`);
+    let response = await fetch(`http://localhost:3001/users/${userId}`);
     let fetchedData = await response.json();
-    let balance = fetchedData[0].balance;
+    console.log(fetchedData.balance)
+    let balance = fetchedData.balance;
 
     setBalance(balance);
   };
 
-  //get balance 
-  let balanceArray = balance.toString().split('.')
-  let integer = balanceArray[0]
-  let decimals = balanceArray[1]
+  // //get balance 
+  // let balanceArray = balance.toString().split('.')
+  // let integer = balanceArray[0]
+  // let decimals = balanceArray[1]
 
   useEffect(() => {
     getBalance();
@@ -47,8 +48,8 @@ const Wallet = () => {
     <div className="wallet-wrapper">
       <div className="wallet-header">
         <h1>
-          <span>{integer}</span>
-          {'.'}{decimals}
+          <span>{balance}</span>
+          {'.'}{'00'}
         </h1>
         <img src={avatar} alt="avatar"></img>
         <p>{"balance"}</p>
@@ -66,7 +67,7 @@ const Wallet = () => {
               <div className="transaction">
                 <li key={transaction.id}>{transaction.vendor}</li>
                 <span key={transaction.amount}>
-                  {"£"}
+                  {"£ "}
                   {transaction.amount}
                 </span>
               </div>
