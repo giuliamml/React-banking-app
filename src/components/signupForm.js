@@ -29,7 +29,7 @@ const SignUpForm = () => {
       console.log("posted");
       history.push("/");
     } else {
-      console.log("not matching emails");
+      console.log("not matching passwords");
       alert("Passwords not matching. Please try again!");
     }
   };

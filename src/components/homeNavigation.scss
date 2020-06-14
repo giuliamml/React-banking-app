@@ -1,4 +1,3 @@
-$light-grey: #3d4046;
 %nav-links-style {
   font-family: "Roboto", sans-serif;
   font-style: normal;
@@ -12,25 +11,31 @@ $light-grey: #3d4046;
 }
 
 .header-wrapper {
-  background-color: $light-grey;
- display: grid;
+  display: grid;
   grid-template-columns: 1fr 1fr;
-
-  img {
-    padding: 1%;
-  }
-
   .login-sections {
     display: inline;
     padding: 1%;
+    justify-items: end;
+
 
     ul {
       padding: 0;
       border: 0;
+      justify-content: space-around;    
 
       li {
         @extend %nav-links-style;
         display: inline-block;
+        padding: 1%;
+
+
+        a {
+          color: #d9d2d1;
+          text-decoration: none;
+          font-size: 16px;
+  
+        }
       }
     }
   }

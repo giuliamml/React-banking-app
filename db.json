@@ -7,6 +7,8 @@
       "email": "john.smith@gmail.com",
       "password": "1234",
       "confirmPassword": "1234",
+      "balance": 3830.21,
+      "savingsBalance": 12000.53,
       "transactions": [
         {
           "vendor": "TFL",
@@ -42,6 +44,8 @@
       "email": "andrew.black@gmail.com",
       "password": "1234",
       "confirmPassword": "1234",
+      "balance": 5830358,
+      "savingsBalance": 4767700,
       "transactions": [
         {
           "vendor": "TFL",
@@ -77,6 +81,8 @@
       "email": "tom.green@gmail.com",
       "password": "1234",
       "confirmPassword": "1234",
+      "balance": 6830.21,
+      "savingsBalance": 2300.53,
       "transactions": [
         {
           "vendor": "Uber",
@@ -112,6 +118,8 @@
       "email": "tony.davis@gmail.com",
       "password": "1234",
       "confirmPassword": "1234",
+      "balance": 830.21,
+      "savingsBalance": 4800.53,
       "transactions": [
         {
           "vendor": "M&S",

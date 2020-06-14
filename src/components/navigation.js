@@ -1,6 +1,8 @@
 import React from "react";
 import logo from "../images/CH.svg";
 import styles from "../components/navigation.scss";
+import { BrowserRouter as Router, Link } from "react-router-dom";
+
 
 const Navigation = () => {
   return (
@@ -10,11 +12,11 @@ const Navigation = () => {
       <div className="login-sections">
         <ul>
           <li>
-            <a>{"login"}</a>
+          <Link to="/">Login</Link>
           </li>
           <li>{" / "}</li>
           <li>
-            <a>{"sign up"}</a>
+          <Link to="/signup">Sign Up</Link>
           </li>
         </ul>
       </div>
@@ -24,17 +26,3 @@ const Navigation = () => {
 
 export default Navigation;
 
-
-// for homepage navigation
-
-{/* <ul>
-<li>
-<Link to="/">Home</Link>
-</li>
-<li>
-<Link to="/about">About</Link>
-</li>
-<li>
-<Link to="/users">Users</Link>
-</li>
-</ul> */}
