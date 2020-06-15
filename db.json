@@ -55,13 +55,13 @@
     },
     {
       "id": 2,
-      "firstName": "Andrew",
+      "firstName": "John",
       "lastName": "Black",
-      "email": "andrew.black@gmail.com",
-      "password": "1234",
-      "confirmPassword": "1234",
-      "balance": 5830766,
-      "savingsBalance": 4767292,
+      "email": "john.black@gmail.com",
+      "password": "456",
+      "confirmPassword": "456",
+      "balance": 2350.0,
+      "savingsBalance": 12500.0,
       "transactions": [
         {
           "vendor": "TFL",
@@ -97,21 +97,6 @@
           "date": "31/5/2020",
           "userId": 2,
           "id": 10
-        },
-        {
-          "vendor": "savings transfer",
-          "amount": "200",
-          "date": "15/6/2020"
-        },
-        {
-          "vendor": "Transfer from Savings",
-          "amount": "200",
-          "date": "15/6/2020"
-        },
-        {
-          "vendor": "Transfer from Savings",
-          "amount": "100",
-          "date": "15/6/2020"
         },
         {
           "vendor": "Transfer from Savings",
@@ -276,6 +261,33 @@
       "confirmPassword": "12",
       "avatar": "C:\\fakepath\\Screenshot 2020-06-11 at 19.29.33.png",
       "id": 8
+    },
+    {
+      "firstName": "",
+      "lastName": "",
+      "email": "",
+      "password": "",
+      "confirmPassword": "",
+      "avatar": "",
+      "id": 9
+    },
+    {
+      "firstName": "Giulia",
+      "lastName": "Mummolo",
+      "email": "mail@giuliamummolo.com",
+      "password": "345",
+      "confirmPassword": "345",
+      "avatar": "",
+      "id": 10
+    },
+    {
+      "firstName": "giulia",
+      "lastName": "mummolo",
+      "email": "giuliamummolo@yahoo.it",
+      "password": "123",
+      "confirmPassword": "123",
+      "avatar": "",
+      "id": 11
     }
   ],
   "transactions": [

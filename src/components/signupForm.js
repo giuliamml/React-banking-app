@@ -3,34 +3,35 @@ import Header from "./navigation";
 import styles from "../components/signupForm.scss";
 import { useHistory } from "react-router-dom";
 
-const SignUpForm = () => {
+const SignUpForm = (props) => {
+
+  console.log(props)
   const [userInfo, setUserInfo] = useState({
     firstName: "",
     lastName: "",
     email: "",
     password: "",
     confirmPassword: "",
-    avatar: ""
+    avatar: "",
   });
 
-  const [file, setFile] = useState({avatar:''})
+  const [file, setFile] = useState({ avatar: "" });
 
   const handleChange = (event) => {
-    event.preventDefault()
+    event.preventDefault();
     setUserInfo({
       ...userInfo,
       [event.target.name]: event.target.value,
     });
-    setFile({...file, avatar: event.target.files})
-    console.log(event)
+    setFile({ ...file, avatar: event.target.files });
+    console.log(event);
   };
-
 
   let history = useHistory();
 
   const handleSubmit = (event) => {
     event.preventDefault();
-    console.log(event)
+    console.log(event);
     if (userInfo.password === userInfo.confirmPassword) {
       postUser(userInfo);
       console.log("posted");
@@ -54,7 +55,6 @@ const SignUpForm = () => {
       .then((data) => data)
       .catch((error) => console.log("Oops something went wrong!"));
   };
-
 
   return (
     <div className="sign-up-wrapper">
@@ -103,6 +103,8 @@ const SignUpForm = () => {
         <input type="submit" value="Save" />
       </form>
     </div>
+
+
   );
 };
 
