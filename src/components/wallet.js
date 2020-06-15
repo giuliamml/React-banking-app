@@ -10,19 +10,15 @@ const Wallet = () => {
   let userId = document.location.pathname.split("").slice(-1)[0];
   console.log(userId);
 
-  const getTransactions = async () => {
-    let response = await fetch(
-      `http://localhost:3001/transactions?userId=${userId}`
-    );
-    let fetchedTransactions = await response.json();
-    setTransactions([...transactions, ...fetchedTransactions]);
-  };
 
   const getBalance = async () => {
     let response = await fetch(`http://localhost:3001/users/${userId}`);
     let fetchedData = await response.json();
     console.log(fetchedData.balance)
     let balance = fetchedData.balance;
+    let fetchedTransactions = fetchedData.transactions
+    setTransactions([...transactions, ...fetchedTransactions])
+    console.log(fetchedTransactions)
 
     setBalance(balance);
   };
@@ -36,9 +32,7 @@ const Wallet = () => {
     getBalance();
   }, []);
 
-  useEffect(() => {
-    getTransactions();
-  }, []);
+
 
   var today = new Date();
   var date =

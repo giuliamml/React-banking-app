@@ -5,6 +5,7 @@ const AmountOut = (props) => {
   const [userData, setUserData] = useState({
     balance: 0,
     savingsBalance: 0,
+    transactions: [],
   });
 
   const [userInput, setUserInput] = useState(0);
@@ -17,6 +18,7 @@ const AmountOut = (props) => {
     setUserData({
       balance: userDataFetched.balance,
       savingsBalance: userDataFetched.savingsBalance,
+      transactions: userDataFetched.transactions,
     });
     console.log(userData);
   };
@@ -27,9 +29,25 @@ const AmountOut = (props) => {
   };
 
   const handleSubmit = (event) => {
+    var today = new Date();
+    var date =
+      today.getDate() +
+      "/" +
+      (today.getMonth() + 1) +
+      "/" +
+      today.getFullYear();
+
     let newBalance = {
       balance: userData.balance + parseInt(userInput),
       savingsBalance: userData.savingsBalance - parseInt(userInput),
+      transactions: [
+        ...userData.transactions,
+        {
+          vendor: "Savings Transfer",
+          amount: userInput,
+          date: date,
+        },
+      ],
     };
 
     return fetch(`http://localhost:3001/users/${userId}`, {

@@ -10,20 +10,27 @@ const SignUpForm = () => {
     email: "",
     password: "",
     confirmPassword: "",
+    avatar: ""
   });
 
+  const [file, setFile] = useState({avatar:''})
+
   const handleChange = (event) => {
+    event.preventDefault()
     setUserInfo({
       ...userInfo,
       [event.target.name]: event.target.value,
     });
+    setFile({...file, avatar: event.target.files})
+    console.log(event)
   };
+
 
   let history = useHistory();
 
   const handleSubmit = (event) => {
     event.preventDefault();
-
+    console.log(event)
     if (userInfo.password === userInfo.confirmPassword) {
       postUser(userInfo);
       console.log("posted");
@@ -47,6 +54,7 @@ const SignUpForm = () => {
       .then((data) => data)
       .catch((error) => console.log("Oops something went wrong!"));
   };
+
 
   return (
     <div className="sign-up-wrapper">
@@ -91,7 +99,7 @@ const SignUpForm = () => {
           value={userInfo.confirmPassword}
         />
         <label>{"Upload avatar"}</label>
-        <input type="file" placeholder={"last name"} />
+        <input type="file" placeholder={"avatar"}  value={userInfo.avatar} name='avatar'/>
         <input type="submit" value="Save" />
       </form>
     </div>

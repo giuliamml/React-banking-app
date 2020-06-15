@@ -44,33 +44,48 @@
       "email": "andrew.black@gmail.com",
       "password": "1234",
       "confirmPassword": "1234",
-      "balance": 5829946,
-      "savingsBalance": 4768112,
+      "balance": 5830166,
+      "savingsBalance": 4767892,
       "transactions": [
         {
           "vendor": "TFL",
           "amount": 10,
-          "date": "1/6/2020"
+          "date": "1/6/2020",
+          "userId": 2,
+          "id": 6
         },
         {
           "vendor": "Tesco",
           "amount": 200,
-          "date": "1/6/2020"
+          "date": "1/6/2020",
+          "userId": 2,
+          "id": 7
         },
         {
           "vendor": "Pret a Manger",
           "amount": 5,
-          "date": "1/6/2020"
+          "date": "1/6/2020",
+          "userId": 2,
+          "id": 8
         },
         {
           "vendor": "Ebay",
           "amount": 500,
-          "date": "31/5/2020"
+          "date": "31/5/2020",
+          "userId": 2,
+          "id": 9
         },
         {
           "vendor": "Amazon",
           "amount": 100,
-          "date": "31/5/2020"
+          "date": "31/5/2020",
+          "userId": 2,
+          "id": 10
+        },
+        {
+          "vendor": "savings transfer",
+          "amount": "200",
+          "date": "15/6/2020"
         }
       ]
     },
@@ -155,6 +170,33 @@
       "password": "1234",
       "confirmPassword": "1234",
       "id": 5
+    },
+    {
+      "firstName": "giulia",
+      "lastName": "mummolo",
+      "email": "qwert",
+      "password": "12",
+      "confirmPassword": "12",
+      "avatar": "C:\\fakepath\\Screenshot 2020-06-11 at 19.29.33.png",
+      "id": 6
+    },
+    {
+      "firstName": "Giulia",
+      "lastName": "Mummolo",
+      "email": "mail@giuliamummolo.com",
+      "password": "12",
+      "confirmPassword": "12",
+      "avatar": "C:\\fakepath\\Screenshot 2020-06-11 at 19.29.33.png",
+      "id": 7
+    },
+    {
+      "firstName": "Giulia",
+      "lastName": "Mummolo",
+      "email": "mail@giuliamummolo.com",
+      "password": "12",
+      "confirmPassword": "12",
+      "avatar": "C:\\fakepath\\Screenshot 2020-06-11 at 19.29.33.png",
+      "id": 8
     }
   ],
   "transactions": [
