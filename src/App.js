@@ -16,7 +16,7 @@ function App() {
       <Route exact path="/signup" component={SignUp}></Route>
       <Route exact path="/homepage/user=:id" component={Homepage}></Route>
       <Route exact path="/savings/user=:id" component={Savings}></Route>
-      <Route exact path="/settings/user=:id" component={Settings}></Route>
+      {/* <Route exact path="/settings/user=:id" component={Settings}></Route> */}
     </Router>
   );
 }

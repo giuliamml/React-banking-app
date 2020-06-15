@@ -29,10 +29,11 @@ const SavingsAccount = (props) => {
 
   const getTransactions = async () => {
     let response = await fetch(
-      `http://localhost:3001/savings?userId=${userId}`
+      `http://localhost:3001/users/${userId}`
     );
     let fetchedTransactions = await response.json();
-    setTransactions([...transactions, ...fetchedTransactions]);
+    
+    setTransactions([...transactions, ...fetchedTransactions.savings]);
   };
 
   const getBalance = async () => {

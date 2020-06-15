@@ -6,6 +6,7 @@ const AmountOut = (props) => {
     balance: 0,
     savingsBalance: 0,
     transactions: [],
+    savings: [],
   });
 
   const [userInput, setUserInput] = useState(0);
@@ -43,11 +44,20 @@ const AmountOut = (props) => {
       transactions: [
         ...userData.transactions,
         {
-          vendor: "Savings Transfer",
+          vendor: "Transfer from Savings",
           amount: userInput,
           date: date,
         },
       ],
+      // savings: [
+      //   ...userData.savings,
+      //   {
+      //     name: "Transfer To Wallet",
+      //     amount: `- ${userInput}`,
+      //     userId: userId,
+      //     date: date,
+      //   },
+      // ],
     };
 
     return fetch(`http://localhost:3001/users/${userId}`, {

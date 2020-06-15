@@ -1,11 +1,11 @@
 import React, { useState, useEffect } from "react";
-import style from './wallet.scss';
-
+import style from "./wallet.scss";
 
 const Amount = (props) => {
   const [userData, setUserData] = useState({
     balance: 0,
     savingsBalance: 0,
+    transactions: [],
   });
 
   const [userInput, setUserInput] = useState(0);
@@ -26,11 +26,27 @@ const Amount = (props) => {
     await setUserInput(event.target.value);
     console.log(userInput);
   };
-
+//transfer to savings not working
   const handleSubmit = (event) => {
+    var today = new Date();
+    var date =
+      today.getDate() +
+      "/" +
+      (today.getMonth() + 1) +
+      "/" +
+      today.getFullYear();
+
     let newBalance = {
       balance: userData.balance - parseInt(userInput),
-      savingsBalance: userData.savingsBalance + parseInt(userInput)
+      savingsBalance: userData.savingsBalance + parseInt(userInput),
+      transactions: [
+        ...userData.transactions,
+        {
+          vendor: "Transfer to Savings",
+          amount: "-" + userInput,
+          date: date,
+        },
+      ],
     };
 
     return fetch(`http://localhost:3001/users/${userId}`, {
@@ -51,8 +67,6 @@ const Amount = (props) => {
       .catch((error) => {
         return "Oops we couldn't update that!";
       });
-
-      
   };
 
   console.log(userData);
@@ -61,8 +75,8 @@ const Amount = (props) => {
   }, []);
 
   return (
-    <div className='amount-input'>
-      <form  onSubmit={handleSubmit}>
+    <div className="amount-input">
+      <form onSubmit={handleSubmit}>
         <input type="text" id={props.id} onChange={handleChange}></input>
         <input type="submit"></input>
       </form>

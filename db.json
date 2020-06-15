@@ -35,6 +35,22 @@
           "amount": 2.5,
           "date": "31/5/2020"
         }
+      ],
+      "savings": [
+        {
+          "name": "Rounded Expenses",
+          "amount": 10,
+          "id": 1,
+          "userId": 1,
+          "date": "31/5/2020"
+        },
+        {
+          "name": "Rounded Expenses",
+          "amount": 500,
+          "id": 2,
+          "userId": 1,
+          "date": "10/5/20"
+        }
       ]
     },
     {
@@ -44,8 +60,8 @@
       "email": "andrew.black@gmail.com",
       "password": "1234",
       "confirmPassword": "1234",
-      "balance": 5830166,
-      "savingsBalance": 4767892,
+      "balance": 5830766,
+      "savingsBalance": 4767292,
       "transactions": [
         {
           "vendor": "TFL",
@@ -86,6 +102,37 @@
           "vendor": "savings transfer",
           "amount": "200",
           "date": "15/6/2020"
+        },
+        {
+          "vendor": "Transfer from Savings",
+          "amount": "200",
+          "date": "15/6/2020"
+        },
+        {
+          "vendor": "Transfer from Savings",
+          "amount": "100",
+          "date": "15/6/2020"
+        },
+        {
+          "vendor": "Transfer from Savings",
+          "amount": "300",
+          "date": "15/6/2020"
+        }
+      ],
+      "savings": [
+        {
+          "name": "Rounded Expenses",
+          "amount": 200,
+          "id": 3,
+          "userId": 2,
+          "date": "1/6/2020"
+        },
+        {
+          "name": "Rounded Expenses",
+          "amount": 1000,
+          "id": 4,
+          "userId": 2,
+          "date": "28/4/2020"
         }
       ]
     },
@@ -124,6 +171,22 @@
           "amount": 5.5,
           "date": "29/5/2020"
         }
+      ],
+      "savings": [
+        {
+          "name": "Rounded Expenses",
+          "amount": 200,
+          "id": 5,
+          "userId": 3,
+          "date": "1/6/2020"
+        },
+        {
+          "name": "Rounded Expenses",
+          "amount": 700,
+          "id": 6,
+          "userId": 3,
+          "date": "31/5/2020"
+        }
       ]
     },
     {
@@ -160,6 +223,22 @@
           "vendor": "Pret a Manger",
           "amount": 2.95,
           "date": "29/5/2020"
+        }
+      ],
+      "savings:": [
+        {
+          "name": "Rounded Expenses",
+          "amount": 50,
+          "id": 7,
+          "userId": 4,
+          "date": "28/5/2020"
+        },
+        {
+          "name": "Rounded Expenses",
+          "amount": 2000,
+          "id": 8,
+          "userId": 4,
+          "date": "1/6/2020"
         }
       ]
     },

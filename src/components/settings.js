@@ -9,7 +9,6 @@ const Settings = (props) => {
 
   return (
     <div>
-      <Navigation id={props.match.params.id} />
       <div className="settings-wrapper">
         <div className="settings-header">
           <div>
@@ -47,7 +46,7 @@ const Settings = (props) => {
           <h3>User</h3>
         </div>
 
-        <SignUpForm id={props.match.params.id} />
+        {/* <SignUpForm id={props.match.params.id} /> */}
       </div>
     </div>
   );
