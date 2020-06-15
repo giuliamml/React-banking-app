@@ -2,7 +2,6 @@ import React, { useState, useEffect } from "react";
 import styles from "../components/loginForm.scss";
 import SignUpForm from "./signupForm.js";
 import Homepage from "./homepage";
-import { BrowserRouter as Router, Route, Switch, Link } from "react-router-dom";
 import { useHistory, useParams } from "react-router-dom";
 
 const LoginForm = () => {
@@ -29,7 +28,8 @@ const LoginForm = () => {
       console.log(userObj);
       let id = userObj.id;
 
-      return history.push("/homepage/user:id");
+      return history.push(`/homepage/user=${id}`);
+     
     } else {
       return console.log("not logged in");
     }

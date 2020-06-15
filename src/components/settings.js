@@ -3,16 +3,21 @@ import Navigation from "./homeNavigation";
 import SignUpForm from "./signupForm";
 import styles from "./settings.scss";
 
-const Settings = () => {
+const Settings = (props) => {
+  console.log(props);
+  const { params } = props;
+
   return (
     <div>
-      <Navigation />
+      <Navigation id={props.match.params.id} />
       <div className="settings-wrapper">
         <div className="settings-header">
-            <div>   {" "}
-          <button></button>
-          <h1>Settings</h1></div>
-       
+          <div>
+            {" "}
+            <button></button>
+            <h1>Settings</h1>
+          </div>
+
           <div className="toggles">
             <div className="toggle">
               {" "}
@@ -28,7 +33,9 @@ const Settings = () => {
             <br></br>
 
             <div className="toggle">
-              <p>Round expenses and <br></br>put to savings account</p>
+              <p>
+                Round expenses and <br></br>put to savings account
+              </p>
               <label>On</label>
               <label class="switch">
                 <input type="checkbox" />
@@ -40,7 +47,7 @@ const Settings = () => {
           <h3>User</h3>
         </div>
 
-        <SignUpForm />
+        <SignUpForm id={props.match.params.id} />
       </div>
     </div>
   );

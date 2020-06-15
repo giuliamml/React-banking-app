@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 import AmountIn from "./amountIn";
 import AmountOut from "./amountOut.js";
 
-const SavingsAccount = () => {
+const SavingsAccount = (props) => {
   const [transactions, setTransactions] = useState([]);
   const [balance, setBalance] = useState(0);
 
@@ -22,9 +22,10 @@ const SavingsAccount = () => {
       ? setAmountOut({ showComponent: false })
       : setAmountOut({ showComponent: true });
   };
-  //review how to get params from url
-  let userId = document.location.pathname.split("").slice(-1)[0];
+
+  let userId = props.id
   console.log(userId);
+
 
   const getTransactions = async () => {
     let response = await fetch(
