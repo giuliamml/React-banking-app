@@ -17,6 +17,8 @@ const Settings = (props) => {
     avatar: "",
   });
 
+
+
   const handleChange = (event) => {
     event.preventDefault();
     setUserInfo({

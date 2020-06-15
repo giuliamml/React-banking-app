@@ -4,19 +4,21 @@
   border-top: 3px solid #f4613a;
   background: linear-gradient(
     200.71deg,
-    #3d4046 27.15%,
+    #3d4046 100%,
     rgba(61, 64, 70, 0) 154.52%
   );
-  box-shadow: 5px 6px 6px #42434d;
+  box-shadow: 0px 0px 10px #42434d;
   position: absolute;
   right: 0%;
   z-index: 1;
-
+  display: grid;
+  grid-template-rows: 30% 70%;
 
   .settings-header {
     display: grid;
     grid-template-rows: auto 1fr auto;
     border-bottom: 2px solid #f4613a;
+    justify-content: center;
 
     button {
       background-image: url("../images/Arrow\ 1.svg");
@@ -28,7 +30,7 @@
       position: relative;
       width: 30px;
       height: 10px;
-      display: inline;
+      top: 30%;
     }
 
     h1 {
@@ -128,6 +130,33 @@
 
   .sign-up-wrapper {
     width: 320px;
+    width: 320px;
+    position: relative;
+    height: 100%;
+    transform: translateX(-50%);
+    display: flex;
+    justify-content: center;
+
+
+    form {
+      display: grid;
+      grid-template-rows: 10% 10% 10% 10% 10% 10% 10% auto;
+
+      input:nth-of-type(6) {
+        border: none;
+      }
+
+      button {
+        background: #f4613a;
+        border-radius: 7px;
+        width: 265px;
+        height: 42px;
+      }
+
+      input{
+        width: 90%;
+      }
+    }
 
     .header {
       display: none;
