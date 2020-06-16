@@ -1,13 +1,19 @@
 import React, { useState, useEffect } from "react";
 
 const LoansAccount = (props) => {
-  //   const [transactions, setTransactions] = useState([]);
-  const [loansData, setLoansData] = useState({ balance: 0, transactions: [] });
+  const [loansData, setLoansData] = useState({
+    loansBalance: 0,
+    loansTransactions: [],
+  });
   const [amountIn, setAmountIn] = useState({ showComponent: false });
   const [amountOut, setAmountOut] = useState({ showComponent: false });
 
   let userId = props.id;
-  console.log(userId);
+
+  var today = new Date();
+  var date =
+    today.getDate() + "/" + (today.getMonth() + 1) + "/" + today.getFullYear();
+
 
   const getData = async () => {
     let response = await fetch(`http://localhost:3001/users/${userId}`);
@@ -16,12 +22,12 @@ const LoansAccount = (props) => {
     let fetchedBalance = fetchedData.loansBalance;
     let fetchedTransactions = fetchedData.loansTransactions;
     setLoansData({
-      balance: fetchedBalance,
-      transactions: [...loansData.transactions, ...fetchedTransactions],
+      loansBalance: fetchedBalance,
+      loansTransactions: [...loansData.loansTransactions, ...fetchedTransactions],
     });
-    // setTransactions([...transactions, ...fetchedTransactions]);
   };
-  console.log(loansData.transactions);
+  console.log(loansData.loansTransactions)
+
   const buttonClickOut = () => {
     return amountOut.showComponent
       ? setAmountOut({ showComponent: false })
@@ -46,11 +52,40 @@ const LoansAccount = (props) => {
 
     const handleSubmit = (e) => {
       e.preventDefault();
-      let newBalance = loansData.balance + parseInt(userInput);
+      let newBalance = loansData.loansBalance + parseInt(userInput);
       setLoansData({
-        balance: newBalance,
-        transactions: loansData.transactions,
+        loansBalance: newBalance,
+        loansTransactions: loansData.loansTransactions,
       });
+
+      let updatedBalance = {
+        loansTransactions: [...loansData.loansTransactions,
+          {
+            name: "Loan Out",
+            amount: userInput,
+            date: date
+          },
+        ],
+        loansBalance: newBalance,
+      };
+      return fetch(`http://localhost:3001/users/${userId}`, {
+        method: "PATCH",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(updatedBalance),
+      })
+        .then((response) => {
+          if (response.status === 200) {
+            return response.json();
+          } else {
+            return "Oops we couldn't update that!";
+          }
+        })
+
+        .catch((error) => {
+          return "Oops we couldn't update that!";
+        });
     };
     return (
       <div className="amount-input">
@@ -72,11 +107,40 @@ const LoansAccount = (props) => {
 
     const handleSubmit = (e) => {
       e.preventDefault();
-      let newBalance = loansData.balance - parseInt(userInput);
+      let newBalance = loansData.loansBalance - parseInt(userInput);
       setLoansData({
-        balance: newBalance,
-        transactions: loansData.transactions,
+        loansBalance: newBalance,
+        loansTransactions: loansData.loansTransactions,
       });
+
+      let updatedBalance = {
+        loansTransactions: [...loansData.loansTransactions,
+          {
+            name: "Loan In",
+            amount: `-${userInput}`,
+            date: date
+          },
+        ],
+        loansBalance: newBalance,
+      };
+      return fetch(`http://localhost:3001/users/${userId}`, {
+        method: "PATCH",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(updatedBalance),
+      })
+        .then((response) => {
+          if (response.status === 200) {
+            return response.json();
+          } else {
+            return "Oops we couldn't update that!";
+          }
+        })
+
+        .catch((error) => {
+          return "Oops we couldn't update that!";
+        });
     };
     return (
       <div className="amount-input">
@@ -96,7 +160,7 @@ const LoansAccount = (props) => {
     <div className="wallet-wrapper" id="loans">
       <div className="wallet-header" id="loans">
         <h1>
-          <span>{loansData.balance}</span>
+          <span>{loansData.loansBalance}</span>
           {"."}
           {"00"}
         </h1>
@@ -118,8 +182,10 @@ const LoansAccount = (props) => {
         </div>
         <div className="wallet-transactions">
           <ul>
-            {loansData.transactions.map((transaction) => (
+              
+            {loansData.loansTransactions.map((transaction) => (
               <div className="transaction">
+                  
                 <li key={transaction.id}>{transaction.name}</li>
 
                 <span key={transaction.amount}>
