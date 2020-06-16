@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 import styles from "../components/wallet.scss";
 import avatar from "../images/avatar.svg";
 
-const Wallet = () => {
+const Wallet = (props) => {
   const [transactions, setTransactions] = useState([]);
   const [balance, setBalance] = useState(0);
 

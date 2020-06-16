@@ -4,6 +4,7 @@ import SignUp from "./components/signupForm.js";
 import Homepage from "./components/homepage.js";
 import Settings from "./components/settings.js";
 import Savings from "./components/savings.js";
+import Loans from './components/loans'
 //react hooks
 import "./App.scss";
 import React, { useState, useEffect } from "react";
@@ -16,6 +17,8 @@ function App() {
       <Route exact path="/signup" component={SignUp}></Route>
       <Route exact path="/homepage/user=:id" component={Homepage}></Route>
       <Route exact path="/savings/user=:id" component={Savings}></Route>
+      <Route exact path="/loans/user=:id" component={Loans}></Route>
+
     </Router>
   );
 }

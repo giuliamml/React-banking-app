@@ -8,6 +8,7 @@
       "password": "1234",
       "confirmPassword": "1234",
       "balance": 3830.21,
+      "loansBalance": -12300,
       "savingsBalance": 12000.53,
       "transactions": [
         {
@@ -61,6 +62,7 @@
       "password": "456",
       "confirmPassword": "456",
       "balance": 2622,
+      "loansBalance": -1300,
       "savingsBalance": 12228,
       "transactions": [
         {
@@ -135,6 +137,7 @@
       "password": "1234",
       "confirmPassword": "1234",
       "balance": 6830.21,
+      "loansBalance": -14300,
       "savingsBalance": 2300.53,
       "transactions": [
         {
@@ -188,6 +191,7 @@
       "password": "1234",
       "confirmPassword": "1234",
       "balance": 830.21,
+      "loansBalance": -1200,
       "savingsBalance": 4800.53,
       "transactions": [
         {

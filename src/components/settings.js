@@ -3,10 +3,19 @@ import Navigation from "./homeNavigation";
 import SignUpForm from "./signupForm";
 import styles from "./settings.scss";
 
+
 const Settings = (props) => {
   console.log(props);
   const { params } = props;
   let id = props.id;
+
+  //add block UI functionality
+  // const [block, setBlock] = useState({blocking: false})
+
+  // const toggleBlocking = () => {
+  //   setBlock({blocking: !block.blocking});
+
+  // }
 
   const [userInfo, setUserInfo] = useState({
     firstName: "",
@@ -16,8 +25,6 @@ const Settings = (props) => {
     confirmPassword: "",
     avatar: "",
   });
-
-
 
   const handleChange = (event) => {
     event.preventDefault();
@@ -71,6 +78,7 @@ const Settings = (props) => {
 
   return (
     <div>
+
       <div className="settings-wrapper">
         <div className="settings-header">
           <div>
@@ -156,6 +164,7 @@ const Settings = (props) => {
           </form>
         </div>
       </div>
+
     </div>
   );
 };

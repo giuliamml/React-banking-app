@@ -42,7 +42,7 @@ const handleSubmit = (event) => {
     savingsBalance: userData.savingsBalance + parseInt(userInput),
     transactions: [
       ...userData.transactions,
-      { vendor: "Transfer from Savings", amount: `- ${userInput}`, date: date },
+      { vendor: "Transfer from Savings", amount: `-${userInput}`, date: date },
     ],
     savings: [
       ...userData.savings,

@@ -44,7 +44,7 @@ const AmountOut = (props) => {
       ],
       savings: [
         ...userData.savings,
-        { vendor: "Transfer To Savings", amount: `- ${userInput}`, date: date },
+        { vendor: "Transfer To Savings", amount: `-${userInput}`, date: date },
       ],
     };
 
