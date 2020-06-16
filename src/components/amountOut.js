@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
 import style from "./wallet.scss";
+import currency from '../images/£.svg'
 
 const AmountOut = (props) => {
   const [userData, setUserData] = useState({
@@ -76,6 +77,7 @@ const AmountOut = (props) => {
   return (
     <div className="amount-input">
       <form onChange={handleChange} onSubmit={handleSubmit}>
+        <img src={currency} alt='currency'/>
         <input type="text" id={props.id}></input>
         <input type="submit"></input>
       </form>

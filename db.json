@@ -8,46 +8,46 @@
       "password": "1234",
       "confirmPassword": "1234",
       "balance": 3830.21,
-      "loansBalance": -12300.50,
+      "loansBalance": -12300.5,
       "savingsBalance": 12000.53,
       "transactions": [
         {
           "vendor": "TFL",
-          "amount": 10.50,
+          "amount": 10.5,
           "date": "1/6/2020"
         },
         {
           "vendor": "M&S",
-          "amount": 50.30,
+          "amount": 50.3,
           "date": "1/6/2020"
         },
         {
           "vendor": "Uber",
-          "amount": 20.20,
+          "amount": 20.2,
           "date": "1/6/2020"
         },
         {
           "vendor": "Amazon Uk",
-          "amount": 200.10,
+          "amount": 200.1,
           "date": "31/5/2020"
         },
         {
           "vendor": "Starbucks",
-          "amount": 2.50,
+          "amount": 2.5,
           "date": "31/5/2020"
         }
       ],
       "loansTransactions": [
         {
           "name": "Thanks for the payment",
-          "amount": 10.00,
+          "amount": 10,
           "id": 1,
           "userId": 1,
           "date": "31/5/2020"
         },
         {
           "name": "Thanks for the payment",
-          "amount": 500.50,
+          "amount": 500.5,
           "id": 2,
           "userId": 1,
           "date": "10/5/20"
@@ -56,14 +56,14 @@
       "savings": [
         {
           "name": "Rounded Expenses",
-          "amount": 10.10,
+          "amount": 10.1,
           "id": 1,
           "userId": 1,
           "date": "31/5/2020"
         },
         {
           "name": "Rounded Expenses",
-          "amount": 500.40,
+          "amount": 500.4,
           "id": 2,
           "userId": 1,
           "date": "10/5/20"
@@ -77,57 +77,66 @@
       "email": "john.black@gmail.com",
       "password": "456",
       "confirmPassword": "456",
-      "balance": 1300.50,
-      "loansBalance": -12500.30,
-      "savingsBalance": 12228.50,
+      "balance": 1300.5,
+      "loansBalance": -12500.3,
+      "savingsBalance": 12228.5,
       "transactions": [
         {
           "vendor": "TFL",
-          "amount": 10.00,
+          "amount": 10,
           "date": "1/6/2020",
           "userId": 2,
           "id": 6
         },
         {
           "vendor": "Tesco",
-          "amount": 200.00,
+          "amount": 200,
           "date": "1/6/2020",
           "userId": 2,
           "id": 7
         },
         {
           "vendor": "Pret a Manger",
-          "amount": 5.00,
+          "amount": 5,
           "date": "1/6/2020",
           "userId": 2,
           "id": 8
         },
         {
           "vendor": "Ebay",
-          "amount": 500.00,
+          "amount": 500,
           "date": "31/5/2020",
           "userId": 2,
           "id": 9
         },
         {
           "vendor": "Amazon",
-          "amount": 100.00,
+          "amount": 100,
           "date": "31/5/2020",
           "userId": 2,
           "id": 10
+        },
+        {
+          "vendor": "Transfer from Savings",
+          "amount": 0,
+          "date": "16/6/2020"
+        },
+        {
+          "vendor": "Transfer from Savings",
+          "amount": "-0",
+          "date": "16/6/2020"
         }
       ],
       "loansTransactions": [
         {
           "name": "Loan Out",
           "amount": "100",
-          "date":"28/5/2020"
+          "date": "28/5/2020"
         },
         {
           "name": "Loan Out",
           "amount": "100",
-          "date":"30/5/2020"
-
+          "date": "30/5/2020"
         },
         {
           "name": "Loan Out",
@@ -150,6 +159,16 @@
           "vendor": "Transfer To Savings",
           "amount": "250",
           "date": "16/6/2020"
+        },
+        {
+          "vendor": "Transfer To Savings",
+          "amount": "-0",
+          "date": "16/6/2020"
+        },
+        {
+          "vendor": "Transfer To Savings",
+          "amount": 0,
+          "date": "16/6/2020"
         }
       ]
     },
@@ -161,46 +180,46 @@
       "password": "1234",
       "confirmPassword": "1234",
       "balance": 6830.21,
-      "loansBalance": -14300.50,
+      "loansBalance": -14300.5,
       "savingsBalance": 2300.53,
       "transactions": [
         {
           "vendor": "Uber",
-          "amount": 30.00,
+          "amount": 30,
           "date": "31/5/2020"
         },
         {
           "vendor": "Sainsuby's",
-          "amount": 300.50,
+          "amount": 300.5,
           "date": "31/5/2020"
         },
         {
           "vendor": "Deliveroo",
-          "amount": 50.00,
+          "amount": 50,
           "date": "30/5/2020"
         },
         {
           "vendor": "Royal Mail",
-          "amount": 3.50,
+          "amount": 3.5,
           "date": "30/5/2020"
         },
         {
           "vendor": "Starbucks",
-          "amount": 5.50,
+          "amount": 5.5,
           "date": "29/5/2020"
         }
       ],
       "loansTransactions": [
         {
           "name": "Thanks for the payment",
-          "amount": 200.30,
+          "amount": 200.3,
           "id": 5,
           "userId": 3,
           "date": "1/6/2020"
         },
         {
           "name": "Thanks for the payment",
-          "amount": 700.00,
+          "amount": 700,
           "id": 6,
           "userId": 3,
           "date": "31/5/2020"
@@ -209,14 +228,14 @@
       "savings": [
         {
           "name": "Rounded Expenses",
-          "amount": 200.50,
+          "amount": 200.5,
           "id": 5,
           "userId": 3,
           "date": "1/6/2020"
         },
         {
           "name": "Rounded Expenses",
-          "amount": 700.00,
+          "amount": 700,
           "id": 6,
           "userId": 3,
           "date": "31/5/2020"
@@ -231,27 +250,27 @@
       "password": "1234",
       "confirmPassword": "1234",
       "balance": 830.21,
-      "loansBalance": -1200.50,
+      "loansBalance": -1200.5,
       "savingsBalance": 4800.53,
       "transactions": [
         {
           "vendor": "M&S",
-          "amount": 200.00,
+          "amount": 200,
           "date": "31/5/2020"
         },
         {
           "vendor": "Deliveroo",
-          "amount": 45.00,
+          "amount": 45,
           "date": "30/5/2020"
         },
         {
           "vendor": "Amazon",
-          "amount": 300.50,
+          "amount": 300.5,
           "date": "30/5/2020"
         },
         {
           "vendor": "Ebay",
-          "amount": 20.40,
+          "amount": 20.4,
           "date": "29/5/2020"
         },
         {
@@ -263,14 +282,14 @@
       "loansTransactions": [
         {
           "name": "Rounded Expenses",
-          "amount": 50.40,
+          "amount": 50.4,
           "id": 7,
           "userId": 4,
           "date": "28/5/2020"
         },
         {
           "name": "Thanks for the payment",
-          "amount": 2000.00,
+          "amount": 2000,
           "id": 8,
           "userId": 4,
           "date": "1/6/2020"
@@ -279,14 +298,14 @@
       "savings:": [
         {
           "name": "Rounded Expenses",
-          "amount": 50.00,
+          "amount": 50,
           "id": 7,
           "userId": 4,
           "date": "28/5/2020"
         },
         {
           "name": "Rounded Expenses",
-          "amount": 20.00,
+          "amount": 20,
           "id": 8,
           "userId": 4,
           "date": "1/6/2020"
@@ -297,49 +316,49 @@
   "transactions": [
     {
       "vendor": "TFL",
-      "amount": 10.30,
+      "amount": 10.3,
       "date": "1/6/2020",
       "userId": 1,
       "id": 1
     },
     {
       "vendor": "M&S",
-      "amount": 50.40,
+      "amount": 50.4,
       "date": "1/6/2020",
       "userId": 1,
       "id": 2
     },
     {
       "vendor": "Uber",
-      "amount": 20.10,
+      "amount": 20.1,
       "date": "1/6/2020",
       "userId": 1,
       "id": 3
     },
     {
       "vendor": "Amazon Uk",
-      "amount": 200.50,
+      "amount": 200.5,
       "date": "31/5/2020",
       "userId": 1,
       "id": 4
     },
     {
       "vendor": "Starbucks",
-      "amount": 2.50,
+      "amount": 2.5,
       "date": "31/5/2020",
       "userId": 1,
       "id": 5
     },
     {
       "vendor": "TFL",
-      "amount": 10.40,
+      "amount": 10.4,
       "date": "1/6/2020",
       "userId": 2,
       "id": 6
     },
     {
       "vendor": "Tesco",
-      "amount": 200.00,
+      "amount": 200,
       "date": "1/6/2020",
       "userId": 2,
       "id": 7
@@ -353,77 +372,77 @@
     },
     {
       "vendor": "Ebay",
-      "amount": 500.40,
+      "amount": 500.4,
       "date": "31/5/2020",
       "userId": 2,
       "id": 9
     },
     {
       "vendor": "Amazon",
-      "amount": 100.10,
+      "amount": 100.1,
       "date": "31/5/2020",
       "userId": 2,
       "id": 10
     },
     {
       "vendor": "Uber",
-      "amount": 30.50,
+      "amount": 30.5,
       "date": "31/5/2020",
       "userId": 3,
       "id": 11
     },
     {
       "vendor": "Sainsuby's",
-      "amount": 300.20,
+      "amount": 300.2,
       "date": "31/5/2020",
       "userId": 3,
       "id": 12
     },
     {
       "vendor": "Deliveroo",
-      "amount": 50.50,
+      "amount": 50.5,
       "date": "30/5/2020",
       "userId": 3,
       "id": 13
     },
     {
       "vendor": "Royal Mail",
-      "amount": 3.50,
+      "amount": 3.5,
       "date": "30/5/2020",
       "userId": 3,
       "id": 14
     },
     {
       "vendor": "Starbucks",
-      "amount": 5.50,
+      "amount": 5.5,
       "date": "29/5/2020",
       "userId": 3,
       "id": 15
     },
     {
       "vendor": "M&S",
-      "amount": 200.20,
+      "amount": 200.2,
       "date": "31/5/2020",
       "userId": 4,
       "id": 16
     },
     {
       "vendor": "Deliveroo",
-      "amount": 45.40,
+      "amount": 45.4,
       "date": "30/5/2020",
       "userId": 4,
       "id": 17
     },
     {
       "vendor": "Amazon",
-      "amount": 300.00,
+      "amount": 300,
       "date": "30/5/2020",
       "userId": 4,
       "id": 18
     },
     {
       "vendor": "Ebay",
-      "amount": 20.10,
+      "amount": 20.1,
       "date": "29/5/2020",
       "userId": 4,
       "id": 19
@@ -439,7 +458,7 @@
   "savings": [
     {
       "name": "Rounded Expenses",
-      "amount": 10.00,
+      "amount": 10,
       "id": 1,
       "userId": 1,
       "date": "31/5/2020"
@@ -453,42 +472,42 @@
     },
     {
       "name": "Rounded Expenses",
-      "amount": 200.10,
+      "amount": 200.1,
       "id": 3,
       "userId": 2,
       "date": "1/6/2020"
     },
     {
       "name": "Rounded Expenses",
-      "amount": 10.20,
+      "amount": 10.2,
       "id": 4,
       "userId": 2,
       "date": "28/4/2020"
     },
     {
       "name": "Rounded Expenses",
-      "amount": 20.00,
+      "amount": 20,
       "id": 5,
       "userId": 3,
       "date": "1/6/2020"
     },
     {
       "name": "Rounded Expenses",
-      "amount": 7.40,
+      "amount": 7.4,
       "id": 6,
       "userId": 3,
       "date": "31/5/2020"
     },
     {
       "name": "Rounded Expenses",
-      "amount": 5.50,
+      "amount": 5.5,
       "id": 7,
       "userId": 4,
       "date": "28/5/2020"
     },
     {
       "name": "Rounded Expenses",
-      "amount": 2.00,
+      "amount": 2,
       "id": 8,
       "userId": 4,
       "date": "1/6/2020"

@@ -7,7 +7,6 @@
 
   .wallet-header {
     width: 560px;
-    height: 130px;
     left: 50%;
     transform: translateX(-50%);
     background: linear-gradient(
@@ -18,25 +17,48 @@
     border-radius: 7px;
     position: relative;
     display: grid;
-    grid-template-columns: 1fr 1fr;
-    grid-template-rows: 1fr 1fr 1fr;
+    grid-template-columns: 50% 50%;
+    grid-template-rows: 1fr 1fr;
     margin-bottom: 5%;
 
     .amount-input {
       width: 560px;
-      height: 168px;
-      /*review the spacing for form*/
-      border-top: 0.5px solid rgba(133, 135, 136, 0.6);
 
       form {
         background-color: transparent;
         border-bottom: 0.5px solid rgba(133, 135, 136, 0.6);
+        border-top: 0.5px solid rgba(133, 135, 136, 0.6);
+        display: flex;
+        flex-direction: rows;
+        height: 50px;
+        margin-bottom: 2%;
+        align-items: center;
+        margin-left:5%;
+        margin-right: 5%;
+
+        img{
+          position: relative;
+          left: 0.5%;
+        }
 
         input {
           background-color: transparent;
           border-top: none;
           border-left: none;
           border-right: none;
+          width: 80%;
+          display: inline;
+          border: none;
+        }
+
+        input[type="submit"] {
+          border: none;
+          width: 120px;
+          height: 28px;
+          background: #f4613a;
+          border-radius: 7px;
+          position: relative;
+          right: 2%;
         }
       }
     }

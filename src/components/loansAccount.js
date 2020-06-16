@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from "react";
+import currency from '../images/£.svg'
 
 const LoansAccount = (props) => {
   const [loansData, setLoansData] = useState({
@@ -14,7 +15,6 @@ const LoansAccount = (props) => {
   var date =
     today.getDate() + "/" + (today.getMonth() + 1) + "/" + today.getFullYear();
 
-
   const getData = async () => {
     let response = await fetch(`http://localhost:3001/users/${userId}`);
     let fetchedData = await response.json();
@@ -23,10 +23,13 @@ const LoansAccount = (props) => {
     let fetchedTransactions = fetchedData.loansTransactions;
     setLoansData({
       loansBalance: fetchedBalance,
-      loansTransactions: [...loansData.loansTransactions, ...fetchedTransactions],
+      loansTransactions: [
+        ...loansData.loansTransactions,
+        ...fetchedTransactions,
+      ],
     });
   };
-  console.log(loansData.loansTransactions)
+  console.log(loansData.loansTransactions);
 
   const buttonClickOut = () => {
     return amountOut.showComponent
@@ -59,11 +62,12 @@ const LoansAccount = (props) => {
       });
 
       let updatedBalance = {
-        loansTransactions: [...loansData.loansTransactions,
+        loansTransactions: [
+          ...loansData.loansTransactions,
           {
             name: "Loan Out",
             amount: userInput,
-            date: date
+            date: date,
           },
         ],
         loansBalance: newBalance,
@@ -90,6 +94,7 @@ const LoansAccount = (props) => {
     return (
       <div className="amount-input">
         <form onChange={handleChange} onSubmit={handleSubmit}>
+          <img src={currency} alt="currency" />
           <input type="text" id={props.id}></input>
           <input type="submit"></input>
         </form>
@@ -114,11 +119,12 @@ const LoansAccount = (props) => {
       });
 
       let updatedBalance = {
-        loansTransactions: [...loansData.loansTransactions,
+        loansTransactions: [
+          ...loansData.loansTransactions,
           {
             name: "Loan In",
             amount: `-${userInput}`,
-            date: date
+            date: date,
           },
         ],
         loansBalance: newBalance,
@@ -145,6 +151,7 @@ const LoansAccount = (props) => {
     return (
       <div className="amount-input">
         <form onChange={handleChange} onSubmit={handleSubmit}>
+          <img src={currency} alt="currency" />
           <input type="text" id={props.id}></input>
           <input type="submit"></input>
         </form>
@@ -156,9 +163,9 @@ const LoansAccount = (props) => {
     getData();
   }, []);
 
-  let balanceArray = loansData.loansBalance.toString().split('.')
-  let integer = balanceArray[0] 
-  let decimals = balanceArray[1] + '0'
+  let balanceArray = loansData.loansBalance.toString().split(".");
+  let integer = balanceArray[0];
+  let decimals = balanceArray[1] + "0";
 
   return (
     <div className="wallet-wrapper" id="loans">
@@ -186,10 +193,8 @@ const LoansAccount = (props) => {
         </div>
         <div className="wallet-transactions">
           <ul>
-              
             {loansData.loansTransactions.map((transaction) => (
               <div className="transaction">
-                  
                 <li key={transaction.id}>{transaction.name}</li>
 
                 <span key={transaction.amount}>
