@@ -37,6 +37,22 @@
           "date": "31/5/2020"
         }
       ],
+      "loansTransactions": [
+        {
+          "name": "Thanks for the payment",
+          "amount": 10,
+          "id": 1,
+          "userId": 1,
+          "date": "31/5/2020"
+        },
+        {
+          "name": "Thanks for the payment",
+          "amount": 500,
+          "id": 2,
+          "userId": 1,
+          "date": "10/5/20"
+        }
+      ],
       "savings": [
         {
           "name": "Rounded Expenses",
@@ -111,6 +127,22 @@
           "date": "15/6/2020"
         }
       ],
+      "loansTransactions": [
+        {
+          "name": "Thanks for the payment",
+          "amount": 200,
+          "id": 3,
+          "userId": 2,
+          "date": "1/6/2020"
+        },
+        {
+          "name": "Thanks for the payment",
+          "amount": 1000,
+          "id": 4,
+          "userId": 2,
+          "date": "28/4/2020"
+        }
+      ],
       "savings": [
         {
           "vendor": "Transfer To Savings",
@@ -166,6 +198,22 @@
           "date": "29/5/2020"
         }
       ],
+      "loansTransactions": [
+        {
+          "name": "Thanks for the payment",
+          "amount": 200,
+          "id": 5,
+          "userId": 3,
+          "date": "1/6/2020"
+        },
+        {
+          "name": "Thanks for the payment",
+          "amount": 700,
+          "id": 6,
+          "userId": 3,
+          "date": "31/5/2020"
+        }
+      ],
       "savings": [
         {
           "name": "Rounded Expenses",
@@ -218,6 +266,22 @@
           "vendor": "Pret a Manger",
           "amount": 2.95,
           "date": "29/5/2020"
+        }
+      ],
+      "loansTransactions": [
+        {
+          "name": "Rounded Expenses",
+          "amount": 50,
+          "id": 7,
+          "userId": 4,
+          "date": "28/5/2020"
+        },
+        {
+          "name": "Thanks for the payment",
+          "amount": 2000,
+          "id": 8,
+          "userId": 4,
+          "date": "1/6/2020"
         }
       ],
       "savings:": [
@@ -432,64 +496,6 @@
     },
     {
       "name": "Rounded Expenses",
-      "amount": 2000,
-      "id": 8,
-      "userId": 4,
-      "date": "1/6/2020"
-    }
-  ],
-  "loans": [
-    {
-      "name": "Thanks for the payment",
-      "amount": 10,
-      "id": 1,
-      "userId": 1,
-      "date": "31/5/2020"
-    },
-    {
-      "name": "Thanks for the payment",
-      "amount": 500,
-      "id": 2,
-      "userId": 1,
-      "date": "10/5/20"
-    },
-    {
-      "name": "Thanks for the payment",
-      "amount": 200,
-      "id": 3,
-      "userId": 2,
-      "date": "1/6/2020"
-    },
-    {
-      "name": "Thanks for the payment",
-      "amount": 1000,
-      "id": 4,
-      "userId": 2,
-      "date": "28/4/2020"
-    },
-    {
-      "name": "Thanks for the payment",
-      "amount": 200,
-      "id": 5,
-      "userId": 3,
-      "date": "1/6/2020"
-    },
-    {
-      "name": "Thanks for the payment",
-      "amount": 700,
-      "id": 6,
-      "userId": 3,
-      "date": "31/5/2020"
-    },
-    {
-      "name": "Rounded Expenses",
-      "amount": 50,
-      "id": 7,
-      "userId": 4,
-      "date": "28/5/2020"
-    },
-    {
-      "name": "Thanks for the payment",
       "amount": 2000,
       "id": 8,
       "userId": 4,
