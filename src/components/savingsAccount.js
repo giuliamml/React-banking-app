@@ -54,7 +54,6 @@ const SavingsAccount = (props) => {
     getBalance();
   }, []);
 
-  //on pay out: transfer amount from savings to wallet
 
   return (
     <div className="wallet-wrapper">
@@ -85,6 +84,7 @@ const SavingsAccount = (props) => {
                   {"£"}
                   {transaction.amount}
                 </span>{" "}
+                <h3>{transaction.vendor}</h3>
                 <p>{transaction.date}</p>
               </div>
             ))}

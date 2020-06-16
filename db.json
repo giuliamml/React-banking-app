@@ -60,8 +60,8 @@
       "email": "john.black@gmail.com",
       "password": "456",
       "confirmPassword": "456",
-      "balance": 2872,
-      "savingsBalance": 11978,
+      "balance": 2622,
+      "savingsBalance": 12228,
       "transactions": [
         {
           "vendor": "TFL",
@@ -107,87 +107,22 @@
           "vendor": "Transfer from Savings",
           "amount": "100",
           "date": "15/6/2020"
-        },
-        {
-          "vendor": "Transfer from Savings",
-          "amount": "200",
-          "date": "16/6/2020"
-        },
-        {
-          "vendor": "Transfer from Savings",
-          "amount": 0,
-          "date": "16/6/2020"
-        },
-        {
-          "vendor": "Transfer from Savings",
-          "amount": "1",
-          "date": "16/6/2020"
-        },
-        {
-          "vendor": "Transfer from Savings",
-          "amount": "10",
-          "date": "16/6/2020"
-        },
-        {
-          "vendor": "Transfer from Savings",
-          "amount": 0,
-          "date": "16/6/2020"
-        },
-        {
-          "vendor": "Transfer from Savings",
-          "amount": "1",
-          "date": "16/6/2020"
-        },
-        {
-          "vendor": "Transfer from Savings",
-          "amount": "10",
-          "date": "16/6/2020"
-        },
-        {
-          "vendor": "Transfer from Savings",
-          "amount": "200",
-          "date": "16/6/2020"
         }
       ],
       "savings": [
-        [
-          [
-            null,
-            {
-              "vendor": "Transfer To Savings",
-              "amount": "- 0",
-              "date": "16/6/2020"
-            }
-          ],
-          {
-            "vendor": "Transfer To Savings",
-            "amount": "- 1",
-            "date": "16/6/2020"
-          }
-        ],
         {
           "vendor": "Transfer To Savings",
-          "amount": "- 10",
-          "date": "16/6/2020"
-        },
-        {
-          "vendor": "Transfer To Savings",
-          "amount": "- 0",
-          "date": "16/6/2020"
-        },
-        {
-          "vendor": "Transfer To Savings",
-          "amount": "- 1",
-          "date": "16/6/2020"
-        },
-        {
-          "vendor": "Transfer To Savings",
-          "amount": "- 10",
+          "amount": "10",
           "date": "16/6/2020"
         },
         {
           "vendor": "Transfer To Savings",
           "amount": "- 200",
+          "date": "16/6/2020"
+        },
+        {
+          "vendor": "Transfer To Savings",
+          "amount": "250",
           "date": "16/6/2020"
         }
       ]
@@ -297,68 +232,6 @@
           "date": "1/6/2020"
         }
       ]
-    },
-    {
-      "firstName": "Giulia",
-      "lastName": "Mummolo",
-      "email": "mail@giuliamummolo.com",
-      "password": "1234",
-      "confirmPassword": "1234",
-      "id": 5
-    },
-    {
-      "firstName": "giulia",
-      "lastName": "mummolo",
-      "email": "qwert",
-      "password": "12",
-      "confirmPassword": "12",
-      "avatar": "C:\\fakepath\\Screenshot 2020-06-11 at 19.29.33.png",
-      "id": 6
-    },
-    {
-      "firstName": "Giulia",
-      "lastName": "Mummolo",
-      "email": "mail@giuliamummolo.com",
-      "password": "12",
-      "confirmPassword": "12",
-      "avatar": "C:\\fakepath\\Screenshot 2020-06-11 at 19.29.33.png",
-      "id": 7
-    },
-    {
-      "firstName": "Giulia",
-      "lastName": "Mummolo",
-      "email": "mail@giuliamummolo.com",
-      "password": "12",
-      "confirmPassword": "12",
-      "avatar": "C:\\fakepath\\Screenshot 2020-06-11 at 19.29.33.png",
-      "id": 8
-    },
-    {
-      "firstName": "",
-      "lastName": "",
-      "email": "",
-      "password": "",
-      "confirmPassword": "",
-      "avatar": "",
-      "id": 9
-    },
-    {
-      "firstName": "Giulia",
-      "lastName": "Mummolo",
-      "email": "mail@giuliamummolo.com",
-      "password": "345",
-      "confirmPassword": "345",
-      "avatar": "",
-      "id": 10
-    },
-    {
-      "firstName": "giulia",
-      "lastName": "mummolo",
-      "email": "giuliamummolo@yahoo.it",
-      "password": "123",
-      "confirmPassword": "123",
-      "avatar": "",
-      "id": 11
     }
   ],
   "transactions": [
