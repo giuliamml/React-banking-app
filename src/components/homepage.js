@@ -10,7 +10,7 @@ const Homepage = (props) => {
     <div>
       {" "}
       <HomeNavigation id={props.match.params.id} />
-      <Wallet />
+      <Wallet id={props.match.params.id} />
     </div>
   );
 };

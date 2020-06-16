@@ -5,7 +5,6 @@ import AmountOut from "./amountOut.js";
 const SavingsAccount = (props) => {
   const [transactions, setTransactions] = useState([]);
   const [balance, setBalance] = useState(0);
-
   const [amountIn, setAmountIn] = useState({ showComponent: false });
   const [amountOut, setAmountOut] = useState({ showComponent: false });
 
@@ -24,8 +23,6 @@ const SavingsAccount = (props) => {
   };
 
   let userId = props.id
-  console.log(userId);
-
 
   const getTransactions = async () => {
     let response = await fetch(
@@ -47,7 +44,8 @@ const SavingsAccount = (props) => {
   //balance
   let balanceArray = balance.toString().split(".");
   let integer = balanceArray[0];
-  let decimals = balanceArray[1];
+  let decimals = balanceArray[1] + '0'
+
 
   useEffect(() => {
     getTransactions();
@@ -79,12 +77,11 @@ const SavingsAccount = (props) => {
           <ul>
             {transactions.map((transaction) => (
               <div className="transaction">
-                <li key={transaction.id}>{transaction.name}</li>
+                <li key={transaction.id}>{transaction.vendor}</li>
                 <span key={transaction.amount}>
                   {"£"}
                   {transaction.amount}
                 </span>{" "}
-                <h3>{transaction.vendor}</h3>
                 <p>{transaction.date}</p>
               </div>
             ))}

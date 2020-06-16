@@ -2,20 +2,12 @@ import React, { useState } from "react";
 import Navigation from "./homeNavigation";
 import SignUpForm from "./signupForm";
 import styles from "./settings.scss";
-
+import BlockUi from "./blockUi";
 
 const Settings = (props) => {
   console.log(props);
   const { params } = props;
   let id = props.id;
-
-  //add block UI functionality
-  // const [block, setBlock] = useState({blocking: false})
-
-  // const toggleBlocking = () => {
-  //   setBlock({blocking: !block.blocking});
-
-  // }
 
   const [userInfo, setUserInfo] = useState({
     firstName: "",
@@ -25,6 +17,8 @@ const Settings = (props) => {
     confirmPassword: "",
     avatar: "",
   });
+
+  const [block, setBlock] = useState({ showComponent: false });
 
   const handleChange = (event) => {
     event.preventDefault();
@@ -76,9 +70,13 @@ const Settings = (props) => {
       });
   };
 
+  const blockUI = () => {
+    setBlock({ showComponent: !block.showComponent });
+    console.log(block);
+  };
   return (
     <div>
-
+      {block.showComponent ?  <BlockUi /> : null }
       <div className="settings-wrapper">
         <div className="settings-header">
           <div>
@@ -91,12 +89,12 @@ const Settings = (props) => {
             <div className="toggle">
               {" "}
               <p>Block account</p>
-              <label>On</label>
+              <label>Off</label>
               <label class="switch">
-                <input type="checkbox" />
+                <input type="checkbox"  onChange={blockUI} />
                 <span class="slider round"></span>
               </label>
-              <label>Off</label>
+              <label>On</label>
             </div>
 
             <br></br>
@@ -116,7 +114,6 @@ const Settings = (props) => {
           <h3>User</h3>
         </div>
         <div className="sign-up-wrapper">
-
           <form onChange={handleChange} onSubmit={handleSubmit}>
             <input
               type="text"
@@ -164,7 +161,6 @@ const Settings = (props) => {
           </form>
         </div>
       </div>
-
     </div>
   );
 };

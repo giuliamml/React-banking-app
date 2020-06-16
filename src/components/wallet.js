@@ -3,29 +3,28 @@ import styles from "../components/wallet.scss";
 import avatar from "../images/avatar.svg";
 
 const Wallet = (props) => {
+
   const [transactions, setTransactions] = useState([]);
   const [balance, setBalance] = useState(0);
 
-  //review how to get params from url
-  let userId = document.location.pathname.split("").slice(-1)[0];
-  console.log(userId);
+  let userId = props.id
 
   const getBalance = async () => {
     let response = await fetch(`http://localhost:3001/users/${userId}`);
     let fetchedData = await response.json();
-    console.log(fetchedData.balance);
     let balance = fetchedData.balance;
+    console.log(balance)
     let fetchedTransactions = fetchedData.transactions;
+
     setTransactions([...transactions, ...fetchedTransactions]);
-    console.log(fetchedTransactions);
-
     setBalance(balance);
-  };
+  };  
 
-  // //get balance
-  // let balanceArray = balance.toString().split('.')
-  // let integer = balanceArray[0]
-  // let decimals = balanceArray[1]
+  //get balance
+  console.log(balance)
+  let balanceArray = balance.toString().split('.')
+  let integer = balanceArray[0]
+  let decimals = balanceArray[1] + '0'
 
   useEffect(() => {
     getBalance();
@@ -39,9 +38,9 @@ const Wallet = (props) => {
     <div className="wallet-wrapper">
       <div className="wallet-header">
         <h1>
-          <span>{balance}</span>
+          <span>{integer}</span>
           {"."}
-          {"00"}
+          {decimals}
         </h1>
         <img src={avatar} alt="avatar"></img>
         <p>{"balance"}</p>

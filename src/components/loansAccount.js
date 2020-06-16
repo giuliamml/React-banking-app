@@ -156,13 +156,17 @@ const LoansAccount = (props) => {
     getData();
   }, []);
 
+  let balanceArray = loansData.loansBalance.toString().split('.')
+  let integer = balanceArray[0] 
+  let decimals = balanceArray[1] + '0'
+
   return (
     <div className="wallet-wrapper" id="loans">
       <div className="wallet-header" id="loans">
         <h1>
-          <span>{loansData.loansBalance}</span>
+          <span>{integer}</span>
           {"."}
-          {"00"}
+          {decimals}
         </h1>
         <button onClick={buttonClickIn}>Loan in</button>
         <p>{"balance"}</p>
