@@ -11,7 +11,7 @@ const AmountOut = (props) => {
 
   const [userInput, setUserInput] = useState(0);
 
-  let userId = document.location.pathname.split("").slice(-1)[0];
+  let userId = props.id
 
   const getUser = async () => {
     let response = await fetch(`http://localhost:3001/users/${userId}`);
@@ -20,6 +20,7 @@ const AmountOut = (props) => {
       balance: userDataFetched.balance,
       savingsBalance: userDataFetched.savingsBalance,
       transactions: userDataFetched.transactions,
+      savings: userDataFetched.savings,
     });
     console.log(userData);
   };
@@ -29,35 +30,22 @@ const AmountOut = (props) => {
     console.log(userInput);
   };
 
-  const handleSubmit = (event) => {
-    var today = new Date();
-    var date =
-      today.getDate() +
-      "/" +
-      (today.getMonth() + 1) +
-      "/" +
-      today.getFullYear();
+  var today = new Date();
+  var date =
+    today.getDate() + "/" + (today.getMonth() + 1) + "/" + today.getFullYear();
 
+  const handleSubmit = (event) => {
     let newBalance = {
       balance: userData.balance + parseInt(userInput),
       savingsBalance: userData.savingsBalance - parseInt(userInput),
       transactions: [
         ...userData.transactions,
-        {
-          vendor: "Transfer from Savings",
-          amount: userInput,
-          date: date,
-        },
+        { vendor: "Transfer from Savings", amount: userInput, date: date },
       ],
-      // savings: [
-      //   ...userData.savings,
-      //   {
-      //     name: "Transfer To Wallet",
-      //     amount: `- ${userInput}`,
-      //     userId: userId,
-      //     date: date,
-      //   },
-      // ],
+      savings: [
+        ...userData.savings,
+        { vendor: "Transfer To Savings", amount: `- ${userInput}`, date: date },
+      ],
     };
 
     return fetch(`http://localhost:3001/users/${userId}`, {

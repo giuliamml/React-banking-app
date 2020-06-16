@@ -35,7 +35,10 @@ const HomeNavigation = (props) => {
             <Link to={`/loans/user=${id}`}>Loans</Link>
           </li>
           <li onClick={handleClick}>Settings</li>
-          <li>{"sign out"}</li>
+          <li>
+            {" "}
+            <Link to={`/`}>Sign Out</Link>
+          </li>
         </ul>
       </div>
       {settings.showComponent ? <Settings id={id} /> : null}

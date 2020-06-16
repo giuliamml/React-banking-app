@@ -67,8 +67,8 @@ const SavingsAccount = (props) => {
         <button onClick={buttonClickIn}>Pay in</button>
         <p>{"balance"}</p>
         <button onClick={buttonClickOut}>Pay out</button>{" "}
-        {amountIn.showComponent ? <AmountIn id={"savings-amount"} /> : null}
-        {amountOut.showComponent ? <AmountOut id={"savings-amount"} /> : null}
+        {amountIn.showComponent ? <AmountIn className={"savings-amount"} id={userId}/> : null}
+        {amountOut.showComponent ? <AmountOut className={"savings-amount"} id={userId}/> : null}
       </div>
 
       <div className="wallet-content">

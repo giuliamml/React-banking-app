@@ -60,8 +60,8 @@
       "email": "john.black@gmail.com",
       "password": "456",
       "confirmPassword": "456",
-      "balance": 2350.0,
-      "savingsBalance": 12500.0,
+      "balance": 2872,
+      "savingsBalance": 11978,
       "transactions": [
         {
           "vendor": "TFL",
@@ -102,22 +102,93 @@
           "vendor": "Transfer from Savings",
           "amount": "300",
           "date": "15/6/2020"
+        },
+        {
+          "vendor": "Transfer from Savings",
+          "amount": "100",
+          "date": "15/6/2020"
+        },
+        {
+          "vendor": "Transfer from Savings",
+          "amount": "200",
+          "date": "16/6/2020"
+        },
+        {
+          "vendor": "Transfer from Savings",
+          "amount": 0,
+          "date": "16/6/2020"
+        },
+        {
+          "vendor": "Transfer from Savings",
+          "amount": "1",
+          "date": "16/6/2020"
+        },
+        {
+          "vendor": "Transfer from Savings",
+          "amount": "10",
+          "date": "16/6/2020"
+        },
+        {
+          "vendor": "Transfer from Savings",
+          "amount": 0,
+          "date": "16/6/2020"
+        },
+        {
+          "vendor": "Transfer from Savings",
+          "amount": "1",
+          "date": "16/6/2020"
+        },
+        {
+          "vendor": "Transfer from Savings",
+          "amount": "10",
+          "date": "16/6/2020"
+        },
+        {
+          "vendor": "Transfer from Savings",
+          "amount": "200",
+          "date": "16/6/2020"
         }
       ],
       "savings": [
+        [
+          [
+            null,
+            {
+              "vendor": "Transfer To Savings",
+              "amount": "- 0",
+              "date": "16/6/2020"
+            }
+          ],
+          {
+            "vendor": "Transfer To Savings",
+            "amount": "- 1",
+            "date": "16/6/2020"
+          }
+        ],
         {
-          "name": "Rounded Expenses",
-          "amount": 200,
-          "id": 3,
-          "userId": 2,
-          "date": "1/6/2020"
+          "vendor": "Transfer To Savings",
+          "amount": "- 10",
+          "date": "16/6/2020"
         },
         {
-          "name": "Rounded Expenses",
-          "amount": 1000,
-          "id": 4,
-          "userId": 2,
-          "date": "28/4/2020"
+          "vendor": "Transfer To Savings",
+          "amount": "- 0",
+          "date": "16/6/2020"
+        },
+        {
+          "vendor": "Transfer To Savings",
+          "amount": "- 1",
+          "date": "16/6/2020"
+        },
+        {
+          "vendor": "Transfer To Savings",
+          "amount": "- 10",
+          "date": "16/6/2020"
+        },
+        {
+          "vendor": "Transfer To Savings",
+          "amount": "- 200",
+          "date": "16/6/2020"
         }
       ]
     },
